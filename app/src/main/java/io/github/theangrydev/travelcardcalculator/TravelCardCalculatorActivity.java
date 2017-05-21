@@ -49,6 +49,7 @@ public class TravelCardCalculatorActivity extends AppCompatActivity {
                 try {
                     result = calculateCostSummary();
                 } catch (RuntimeException e) {
+                    // TODO #3 better exception handling
                     Log.e("CalculateCostSummary", e.toString());
                     result = getString(R.string.invalid_data_entered);
                 }
@@ -75,6 +76,7 @@ public class TravelCardCalculatorActivity extends AppCompatActivity {
                 }
             }
 
+            // TODO #2 support currency properly
             private void convertDoubleFormatToCurrency(String text) {
                 if (text.isEmpty()) {
                     currencyText.setText(CURRENCY_SYMBOL);
@@ -84,6 +86,7 @@ public class TravelCardCalculatorActivity extends AppCompatActivity {
                 }
             }
 
+            // TODO #2 support currency properly
             private void convertCurrencyFormatToDouble(String text) {
                 try {
                     if (text.equals(CURRENCY_SYMBOL)) {
@@ -93,6 +96,7 @@ public class TravelCardCalculatorActivity extends AppCompatActivity {
                         currencyText.setText(Double.toString(value));
                     }
                 } catch (ParseException e) {
+                    // TODO #3 better exception handling
                     Log.e("ConvertCurrencyToDouble", e.toString());
                 }
             }
@@ -131,18 +135,22 @@ public class TravelCardCalculatorActivity extends AppCompatActivity {
         return CURRENCY_FORMAT.format(value);
     }
 
+    // TODO #1 DatePicker instead of EditText
     private LocalDate getEditTextValueAsDate(int editTextId) {
         EditText editText = (EditText) findViewById(editTextId);
         try {
             return new LocalDate(DATE_FORMAT.parse(editText.getText().toString()));
         } catch (ParseException e) {
+            Log.e("getEditTextValueAsDate", e.getMessage());
             return null;
         }
     }
 
     private double getCurrencyEditTextValueAsDouble(int editTextId) {
         EditText editText = (EditText) findViewById(editTextId);
-        return Double.parseDouble(editText.getText().toString().replaceFirst(Pattern.quote(CURRENCY_SYMBOL), ""));
+        return Double.parseDouble(editText.getText().toString()
+                .replaceAll(",", "") // TODO #2 support currency properly
+                .replaceFirst(Pattern.quote(CURRENCY_SYMBOL), ""));
     }
 
     private int getEditTextValueAsInt(int editTextId) {

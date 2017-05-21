@@ -2,6 +2,7 @@ package io.github.theangrydev.travelcardcalculator;
 
 import org.joda.time.*;
 
+// TODO: #4 Calculator seems buggy
 public class CostSummaryCalculator {
 	private final LocalDate dateFrom;
 	private final LocalDate dateTo;
