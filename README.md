@@ -1,0 +1,1 @@
+This is a simple application that allows you to calculate the benefit (or not!) of purchasing a travel card
