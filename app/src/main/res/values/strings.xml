@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Travel Card Calculator</string>
+    <string name="action_settings">Settings</string>
+    <string name="i_make">I make </string>
+    <string name="journeys_a"> journey(s) a </string>
+    <string name="i_would_like_to_compare">I would like to compare the cost of</string>
+    <string name="with_the_cost_of">with the cost of</string>
+    <string name="calculate">Calculate</string>
+    <string name="at">\@</string>
+    <string name="and">and</string>
+    <string name="between">between</string>
+    <string name="day">day</string>
+    <string name="week">week</string>
+    <string name="month">month</string>
+    <string name="year">year</string>
+    <string name="single_fares">single fares</string>
+    <string name="a_daily_travelcard">a daily travelcard</string>
+    <string name="a_weekly_travelcard">a weekly travelcard</string>
+    <string name="a_monthly_travelcard">a monthly travelcard</string>
+    <string name="an_annual_travelcard">an annual travelcard</string>
+    <string name="more_expensive">more expensive</string>
+    <string name="cheaper">cheaper</string>
+    <string name="result">Buying %1$s is %2$s, costing %3$s per journey and %4$s over the days selected while buying %5$s is %6$s, costing %7$s per journey and %8$s over the days selected.</string>
+    <string name="invalid_data_entered">You have entered invalid data, please try again.</string>
+</resources>
