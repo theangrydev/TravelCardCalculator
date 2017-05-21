@@ -138,7 +138,7 @@
             android:layout_height="wrap_content"
             android:ems="6"
             android:textSize="@dimen/specification_font_size"
-            android:inputType="date" >
+            android:inputType="date|textNoSuggestions" >
         </EditText>
 
         <TextView
@@ -154,7 +154,7 @@
             android:layout_weight="1"
             android:ems="6"
             android:textSize="@dimen/specification_font_size"
-            android:inputType="date" />
+            android:inputType="date|textNoSuggestions" />
 
     </LinearLayout>
 

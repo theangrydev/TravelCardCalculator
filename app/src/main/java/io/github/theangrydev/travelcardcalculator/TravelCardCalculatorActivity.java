@@ -49,6 +49,7 @@ public class TravelCardCalculatorActivity extends AppCompatActivity {
                 try {
                     result = calculateCostSummary();
                 } catch (RuntimeException e) {
+                    Log.e("CalculateCostSummary", e.toString());
                     result = getString(R.string.invalid_data_entered);
                 }
                 TextView resultTextView = (TextView) findViewById(R.id.result);
@@ -123,7 +124,7 @@ public class TravelCardCalculatorActivity extends AppCompatActivity {
 
         return String.format(getString(R.string.result),
                 getSpinnerText(R.id.first_to_compare_period), firstCompared, formatCurrency(costSummary.firstCostPerJourney), formatCurrency(costSummary.firstTotalCost()),
-                getSpinnerText(R.id.first_to_compare_period), secondCompared, formatCurrency(costSummary.secondCostPerJourney), formatCurrency(costSummary.secondTotalCost()));
+                getSpinnerText(R.id.second_to_compare_period), secondCompared, formatCurrency(costSummary.secondCostPerJourney), formatCurrency(costSummary.secondTotalCost()));
     }
 
     private String formatCurrency(double value) {
