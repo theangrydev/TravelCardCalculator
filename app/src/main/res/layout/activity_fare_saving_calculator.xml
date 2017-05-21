@@ -35,6 +35,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingLeft="@dimen/journey_text_padding"
+            android:paddingStart="@dimen/journey_text_padding"
+            android:paddingRight="@dimen/journey_text_padding"
             android:text="@string/journeys_a"
             android:textSize="@dimen/specification_font_size" />
 
